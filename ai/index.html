@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>素材水印识别</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<link rel="stylesheet" href="css/global-379b5ba0a9.css?max_age=31536000" />
+		<style>
+			#destination {
+			    height: 352px;
+			}
+			#destination img {
+			    width: 100%;
+			    height: 100%;
+			}
+			
+		</style>
+		<link rel="stylesheet" href="css/index-c35aee0853.css?max_age=31536000">
+		<script src="js/jquery-2.1.0.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="demo">
+			<div class="layout">
+				<h1 class="">素材水印识别</h1>
+
+				<div class="tab-cont jmod-ocr-id" style="display: block;">
+					<div class="demo-opt demo-box demo-box-sm jmod-uploader-wrapper">
+						<div class="img-preview jmod-preview" id="preview">
+							<label id="sourceImgLabel">原始图片</label>
+							<p class="err-tip jmod-err-tip"></p>
+							<div class="jmod-img-result" style="display:inline-block;" id="destination">
+								<!--<img src="" width="100%" height="352px" onerror="this.src='img/timg.jpeg'"/>-->
+								<img  />
+							</div>
+						</div>
+						<div class="form-row">
+							<input type="file" id="imgUpload" name="imgUpload" draggable="true" single class="inputfile jmod-file" >
+							<label for="file_1" class="btn btn-upload jmod-upload" onclick="$('#imgUpload').click()">本地上传</label>
+							<label>或</label>
+							<span class="imgurl">
+                        <div class="ui-input">
+                            <input id="avatarSlect" type="text" class="jmod-network-url" placeholder="输入网络图片URL">
+                            <div class="ui-input-bg"></div>
+                        </div>
+                        <a class="btn btn-test jmod-detect" id="detection_btn" onclick="uploadImg()">检测</a>
+                    </span>
+						</div>
+						<p class="tips">提示：图片大小不超过1M，请保证需要识别部分为图片主体部分</p>
+					</div>
+					<div class="demo-rs demo-box demo-box-sm jmod-result-wrapper">
+						<div class="jmod-result"><label class="demo-rs-label">识别结果</label>
+							<div class="sec sec-txt">
+							</div>
+						</div>
+						<div class="ui-loading jmod-result-loading hidden">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/index.js"></script>
+
+</html>
